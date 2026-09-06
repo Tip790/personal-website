@@ -4,7 +4,7 @@
 </head>
 <body>
     <nav>
-        <a href="/">Home</a> |
+        <a href="/">Home</a> -
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
     </nav>
@@ -16,10 +16,10 @@
     {% for task in tasks %}
         <li>
             {{ task.title }}
-            {% if task.done %}
-                - done
+            {% if task.completed %}
+                - Completed
             {% else %}
-                - not done
+                - In Progress
             {% endif %}
         </li>
     {% endfor %}
