@@ -1,0 +1,7 @@
+# Q1 Choose one test from the provided suite and name it. In plain English, what does that test confirm about your site? Then name one thing your site could get wrong that this test would not catch.
+
+## `def test_page_shows_both_status_labels` tests if the `home/html` template contains the labels "Completed" or "In progress". What it does not catch is if these labels are in their correct places, meaning swapping the code to where the completed tasks are considered "In progress" and the incomplete tasks are considered "Completed", the test would still pass as it contains the proper labels even though in the context of the task list, it is incorrect.
+
+# Q2 You built three pages that share one navigation bar. If you added a fourth link to your navigation, how many files would you edit? How many would you have edited if you had not used `base.html`, and why?
+
+## With the `base.html` template, only one file edit would be needed as you are adding the `href` to `base.html`. Without it, you would have to edit the `home.html`, `contact.html` and `about.html` to include the new `href`. Causing 3 different edits instead of just one. This is because the `{% extends "base.html" %}` code at the top of the other templates grab the code within `base.html`'s `{% block content %}` tag, meaning they all share the same content located within `base.html`.
